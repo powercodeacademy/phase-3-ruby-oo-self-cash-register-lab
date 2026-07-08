@@ -48,7 +48,7 @@ describe 'CashRegister' do
 
       it 'returns success message with updated total' do
         cash_register_with_discount.add_item("macbook air", 1000)
-        expect(cash_register_with_discount.apply_discount).to eq("After the discount, the total comes to $800.")
+        expect(cash_register_with_discount.apply_discount).to eq("After the discount, the total comes to $800.") #This test is dumb because Total was a float so it was $800.0, I had to use #floor which also means that if our total isn't a whole number, the output message is wrong
       end
 
       it 'reduces the total' do
